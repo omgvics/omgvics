@@ -23,7 +23,7 @@
 
   var CSS =
     'vics-taskbar .vt-bar{position:fixed;top:0;left:0;right:0;' +
-    'height:clamp(33px, calc(33px + (1600px - 100vw) * 0.047), 60px);z-index:400;' +
+    'height:clamp(44px, calc(44px + (1600px - 100vw) * 0.047), 60px);z-index:400;' +
     'background:rgba(30,19,66,0.7);display:flex;flex-direction:row;justify-content:space-between;align-items:center;' +
     'padding:8px clamp(20px, 2.5vw, 40px);box-sizing:border-box;font-family:"Pixelify Sans",ui-monospace,"Courier New",monospace;' +
     'font-size:14px;font-weight:400;line-height:1;color:#fff;user-select:none;}' +
@@ -212,9 +212,11 @@
 
     _renderMusic() {
       var on = this._pref === 'on';
-      this._musicBtn.innerHTML = on
-        ? '<span class="vt-ic-vol"></span><span>Playing: <a href="' + CREDIT_URL + '" target="_blank" rel="noopener noreferrer">MondaMusic</a></span>'
-        : '<span class="vt-ic-vol"></span><span>Music Off</span>';
+      
+      // The text and link remain static regardless of the 'on' state
+      this._musicBtn.innerHTML = '<span class="vt-ic-vol"></span><span>Music: <a href="' + CREDIT_URL + '" target="_blank" rel="noopener noreferrer">MondaMusic</a></span>';
+      
+      // Only the Lucide icon toggles between volume-2 (on) and volume-x (off)
       this._setIcon('.vt-ic-vol', on ? 'volume-2' : 'volume-x');
     }
 
