@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat, Pixelify_Sans } from "next/font/google";
 import Script from "next/script";
+import { CursorTrailEffect } from "@/components/CursorTrailEffect";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -71,6 +72,8 @@ export default function RootLayout({
             "linear-gradient(-15.354deg, rgb(255,162,149) -15.1%, rgb(91,72,147) 83.6%)",
         }}
       >
+        <CursorTrailEffect />
+
         {/* flying toasters video (black knocked out via screen blend against the gradient) */}
         <video
           autoPlay
