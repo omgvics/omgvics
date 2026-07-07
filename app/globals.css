@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-montserrat);
+  --font-pixelify: var(--font-pixelify);
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    transform: scale(0.55) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.scrollbody {
+  scrollbar-width: thin;
+  scrollbar-color: #e45e96 #fbd0ca;
+}
+.scrollbody::-webkit-scrollbar {
+  width: 12px;
+}
+.scrollbody::-webkit-scrollbar-track {
+  background: #fbd0ca;
+}
+.scrollbody::-webkit-scrollbar-thumb {
+  background: #e45e96;
+  border: 3px solid #fbd0ca;
+}
+
+.crumb {
+  color: #212121;
+  text-decoration: none;
+}
+.crumb:hover {
+  color: #212121;
+  text-decoration: underline;
+}
+
+.sayhi-field::placeholder {
+  color: #9b9b9b;
+}
+.sayhi-field:focus {
+  outline: 2px solid #b586bc;
+}
