@@ -226,10 +226,23 @@ class Component extends DCLogic {
   componentDidMount() {
     const vid = this.videoRef.current;
     if (vid) {
+      // React drops the `muted` attribute (only sets the property); iOS Safari's
+      // autoplay policy checks the muted ATTRIBUTE, so re-add it explicitly.
       vid.muted = true;
+      vid.defaultMuted = true;
+      vid.setAttribute('muted', '');
+      vid.setAttribute('playsinline', '');
+      vid.playsInline = true;
       vid.loop = true;
       vid.addEventListener('ended', () => { vid.currentTime = 0; vid.play().catch(() => {}); });
-      vid.play().catch(() => {});
+      const tryPlay = () => { vid.muted = true; const p = vid.play(); if (p && p.catch) p.catch(() => {}); };
+      tryPlay();
+      vid.addEventListener('loadeddata', tryPlay, { once: true });
+      vid.addEventListener('canplay', tryPlay, { once: true });
+      // fallback: kick playback on first user interaction if autoplay was blocked
+      const kick = () => { if (vid.paused) tryPlay(); };
+      ['touchstart', 'pointerdown', 'click'].forEach((ev) =>
+        document.addEventListener(ev, kick, { once: true, passive: true }));
     }
 
     this.fit();
