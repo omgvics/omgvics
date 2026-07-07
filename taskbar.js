@@ -1,5 +1,5 @@
 /* VICS OS taskbar — retro y2k OS menu bar (desktop only)
-   <vics-taskbar audio-src="uploads/....mp3"></vics-taskbar>
+   <vics-taskbar audio-src="assets/images/....mp3"></vics-taskbar>
    - Live clock (user's local time)
    - Weather via open-meteo (IP-based geolocation, no permission prompt), lucide icon mapped to conditions
    - Background music with mute toggle; preference + playback position persisted in localStorage
@@ -131,7 +131,13 @@
     // ---------- music ----------
     _initMusic() {
       var self = this;
-      var src = this.getAttribute('audio-src') || 'uploads/mondamusic-synthwave-retro-pop-80s-491693.mp3';
+      
+      // FIX: Accounts for converted runtime attributes (React converts hyphenated attributes to camelCase)
+      // and corrects the internal fallback string to match your layout directory directory layout.
+      var src = this.getAttribute('audio-src') || 
+                this.getAttribute('audioSrc') || 
+                'assets/images/mondamusic-synthwave-retro-pop-80s-491693.mp3';
+                
       var isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
       var pref = lsGet('vics-music-pref');
