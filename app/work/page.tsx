@@ -146,7 +146,7 @@ export default function WorkPage() {
                   alt="Product design for the RetailROI Cost of Social Worker Turnover Calculator by Product Designer Victoria Lo"
                   caption={
                     <>
-                      [Retrail Orphan Initiative]
+                      [Retail Orphan Initiative]
                       <br />
                       Cost of Social Worker Turnover
                       <br />
@@ -237,7 +237,7 @@ export default function WorkPage() {
                   alt="Product design for the RetailROI Cost of Social Worker Turnover Calculator by Product Designer Victoria Lo"
                   caption={
                     <>
-                      [Retrail Orphan Initiative]
+                      [Retail Orphan Initiative]
                       <br />
                       Cost of Social Worker Turnover Online Calculator
                     </>
