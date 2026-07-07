@@ -18,10 +18,43 @@ const pixelifySans = Pixelify_Sans({
   display: "swap",
 });
 
+const SITE_URL = "https://www.omgvics.com";
+const OG_IMAGE = `${SITE_URL}/assets/images/oh-em-gee.png`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "OMGVICS • Victoria Lo",
   description:
     "Portfolio of Victoria Lo (OMGVICS), a Brooklyn-based Product Design Manager specializing in complex product problems, UX/UI, and design systems.",
+  keywords: [
+    "Victoria Lo",
+    "OMGVICS",
+    "product design manager",
+    "lead designer",
+    "UX/UI designer",
+    "Brooklyn designer",
+    "design systems",
+    "enterprise software design",
+    "Chinatown Runners",
+  ],
+  icons: {
+    icon: "/assets/images/banana.png",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: "Victoria Lo | Product Design Manager",
+    description:
+      "Portfolio of Victoria Lo, a Brooklyn-based Product Design Manager solving complex, ambiguous product problems.",
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Victoria Lo | Product Design Manager",
+    description:
+      "Portfolio of Victoria Lo, a Brooklyn-based Product Design Manager solving complex, ambiguous product problems.",
+    images: [OG_IMAGE],
+  },
 };
 
 export default function RootLayout({
