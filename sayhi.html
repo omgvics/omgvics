@@ -40,11 +40,11 @@
     <!-- sayhi.html window -->
     <div data-window="sayhi" style="position:absolute; left:440px; top:60px; width:1156px; z-index:20; border:2px solid #212121; box-shadow:0 16px 40px rgba(40,25,70,0.28);">
       <div data-titlebar style="display:flex; align-items:center; justify-content:space-between; height:58px; padding:12px; background:#b586bc; border-bottom:2px solid #212121; user-select:none;">
-        <span style="font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:18px; color:#000;">sayhi.exe</span>
+        <span style="font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:24px; color:#000;">say-hi</span>
         <a href="index.html" style="display:flex;"><img src="assets/images/close.png" alt="close" draggable="false" style="width:34px; height:34px; cursor:pointer; user-select:none;"></a>
       </div>
       <div style="background:#fbd0ca; padding:32px 24px; display:flex; flex-direction:row; gap:32px; align-items:flex-start;">
-        <p style="margin:0; flex-grow:1; font-size:24px; line-height:1.3; color:#212121;">Interested in working together?<br>Or maybe you need some tips on your running form (I am a <a href="https://www.rrca.org/" target="_blank" rel="noopener noreferrer" style="color:#212121; font-weight:700; text-decoration:underline; text-underline-offset:3px;">RRCA</a> Level 1 certified running coach! 🥳)<br><br>Either way, I love getting mail so don't be shy, say hello!</p>
+        <p style="margin:0; flex-grow:1; font-size:24px; line-height:1.25; color:#212121;">Interested in working together?<br>Or maybe you need some tips on your running form?<br><br>Either way, I love getting mail so don't be shy, say hello!</p>
 
         <div style="width:591px; flex-shrink:0; display:flex; flex-direction:column; align-items:flex-end; align-self:stretch; min-height:447px;">
           <!-- form state -->
@@ -60,7 +60,7 @@
           </div>
           <!-- success state -->
           <div data-success style="display:none; flex-direction:column; gap:24px; align-items:flex-end; align-self:stretch; flex-grow:1;">
-            <span style="align-self:stretch; font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:18px; color:#212121;">Success! Your message was successfully sent.</span>
+            <span style="align-self:stretch; font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:18px; color:#212121;">Success! Your message was sent.</span>
             <img src="assets/images/paperplane.png" alt="" draggable="false" style="align-self:center; width:100%; max-width:584px; height:auto; margin:8px 0; user-select:none;">
             <button data-sendanother type="button" style="margin-top:auto; background:#fbd0ca; border:1.5px solid #000; padding:8px 16px; font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:18px; color:#000; cursor:pointer; white-space:nowrap;">Send Another?</button>
           </div>
@@ -68,20 +68,26 @@
       </div>
     </div>
 
-    <!-- chicago-marathon2023.png window -->
-    <div data-window="portrait" style="position:absolute; left:60px; top:382px; width:435px; z-index:40; border:2px solid #212121; box-shadow:0 14px 34px rgba(40,25,70,0.3);">
+    <!-- System Administrator window (click sprite to rotate hair color) -->
+    <div data-window="sysadmin" style="position:absolute; left:277px; top:555px; width:408px; z-index:40; border:2px solid #212121; box-shadow:0 14px 34px rgba(40,25,70,0.3);">
       <div data-titlebar style="display:flex; align-items:center; justify-content:space-between; height:60px; padding:12px; background:#b586bc; border-bottom:2px solid #212121; user-select:none;">
-        <span style="font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:18px; color:#000; white-space:nowrap;">chicago-marathon2023.png</span>
-        <img data-closehide src="assets/images/close.png" alt="close" draggable="false" style="width:34px; height:34px; cursor:pointer; user-select:none;">
+        <span style="font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:24px; color:#000; white-space:nowrap;">System Administrator</span>
+        <img data-closehide src="assets/images/close.png" alt="close" draggable="false" style="width:32px; height:32px; cursor:pointer; user-select:none;">
       </div>
-      <div style="position:relative; background:#fbd0ca; padding:8px;">
-        <img src="assets/images/marathon.jpg" alt="Victoria running the Chicago Marathon 2023" draggable="false" style="display:block; width:419px; height:562px; object-fit:cover; user-select:none;">
-        <div style="position:absolute; left:8px; right:8px; bottom:8px; background:#fbd0ca; padding:6px 8px; font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-weight:700; font-size:20px; color:#000; white-space:nowrap;">photo courtesy of <a href="https://www.davidjaewonoh.com/" target="_blank" rel="noopener noreferrer" style="color:#000; text-decoration:underline; text-underline-offset:2px; font-weight:700;">David Jaewon Oh</a></div>
+      <div style="background:#fbd0ca; padding:32px; display:flex; flex-direction:column; gap:16px; align-items:center;">
+        <div style="position:relative; align-self:stretch; height:180px;">
+          <img data-sprite src="assets/images/Sprite-blk.png" alt="Pixel sprite of Victoria — click to change hair color" title="click to change my hair color!" draggable="false" style="position:absolute; right:0; bottom:0; width:180px; height:180px; image-rendering:pixelated; cursor:pointer; user-select:none;">
+          <div style="position:absolute; left:0; top:6px; background:#fff; border:1.5px solid #212121; padding:8px 12px; font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:13px; color:#000; white-space:nowrap;">click to change my hair color!
+            <span style="position:absolute; right:24px; bottom:-11px; width:0; height:0; border-left:9px solid transparent; border-right:9px solid transparent; border-top:11px solid #212121;"></span>
+            <span style="position:absolute; right:26px; bottom:-8px; width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:9px solid #fff;"></span>
+          </div>
+        </div>
+        <div style="align-self:stretch; text-align:center; font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-weight:700; font-size:12px; color:#000;">Sprite Vics made with <a href="https://www.avatarsinpixels.com" target="_blank" rel="noopener noreferrer" style="color:#000; font-weight:700; text-decoration:underline;">avatarsinpixels.com</a></div>
       </div>
     </div>
 
     <!-- ===== sidebar nav ===== -->
-    <div style="position:absolute; left:1708px; top:60px; width:108px; z-index:60; display:flex; flex-direction:column; gap:30px; align-items:center;">
+    <div style="position:absolute; left:1770px; top:60px; width:108px; z-index:60; display:flex; flex-direction:column; gap:30px; align-items:center;">
       <a href="index.html" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:8px;">
         <img src="assets/images/home.png" alt="" draggable="false" style="width:70px; height:77px; object-fit:contain; user-select:none;">
         <span style="font-family:'Pixelify Sans', ui-monospace, 'Courier New', monospace; font-size:18px; color:#212121; background:#fbd0ca; border:2px solid #212121; border-radius:0; padding:7px 14px; line-height:1; white-space:nowrap;">Home</span>
@@ -120,11 +126,11 @@
       <!-- sayhi.html window -->
       <div style="border:2px solid #212121; background:#fbd0ca; box-shadow:0 10px 26px rgba(40,25,70,0.26);">
         <div style="display:flex; align-items:center; justify-content:space-between; height:46px; padding:0 12px; background:#b586bc; border-bottom:2px solid #212121;">
-          <span style="font-family:'Pixelify Sans', ui-monospace, monospace; font-size:18px; color:#212121;">sayhi.exe</span>
+          <span style="font-family:'Pixelify Sans', ui-monospace, monospace; font-size:18px; color:#212121; white-space:nowrap;">say-hi</span>
           <a href="index.html" style="display:flex;"><img src="assets/images/close.png" alt="close" style="width:28px; height:28px;"></a>
         </div>
         <div style="padding:22px 18px; display:flex; flex-direction:column; gap:20px;">
-          <p style="margin:0; font-size:18px; line-height:1.35; color:#212121;">Interested in working together?<br>Or maybe you need some tips on your running form (I am a <a href="https://www.rrca.org/" target="_blank" rel="noopener noreferrer" style="color:#212121; font-weight:700; text-decoration:underline; text-underline-offset:3px;">RRCA</a> Level 1 certified running coach! 🥳)<br><br>Either way, I love getting mail so don't be shy, say hello!</p>
+          <p style="margin:0; font-size:18px; line-height:1.35; color:#212121;">Interested in working together?<br>Or maybe you need some tips on your running form?<br><br>Either way, I love getting mail so don't be shy, say hello!</p>
           <div data-form style="display:flex; flex-direction:column; gap:20px;">
             <input data-field="name" class="sayhi-field" type="text" placeholder="Name" style="height:48px; border:none; background:#fff; padding:0 16px; font-family:'Montserrat',sans-serif; font-size:18px; color:#212121;">
             <input data-field="email" class="sayhi-field" type="email" placeholder="Email address" style="height:48px; border:none; background:#fff; padding:0 16px; font-family:'Montserrat',sans-serif; font-size:18px; color:#212121;">
@@ -134,22 +140,28 @@
             <div data-formerror style="display:none; font-family:'Pixelify Sans', ui-monospace, monospace; font-size:15px; color:#8b1a1a;"></div>
           </div>
           <div data-success style="display:none; flex-direction:column; gap:16px;">
-            <span style="font-family:'Pixelify Sans', ui-monospace, monospace; font-size:18px; color:#212121;">Success! Your message was successfully sent.</span>
+            <span style="font-family:'Pixelify Sans', ui-monospace, monospace; font-size:18px; color:#212121;">Success! Your message was sent.</span>
             <img src="assets/images/paperplane.png" alt="" style="width:100%; height:auto;">
             <button data-sendanother type="button" style="align-self:flex-start; background:#fbd0ca; border:1.5px solid #000; padding:10px 22px; font-family:'Pixelify Sans', ui-monospace, monospace; font-size:18px; color:#000; cursor:pointer;">Send Another?</button>
           </div>
         </div>
       </div>
 
-      <!-- marathon portrait window -->
+      <!-- System Administrator window -->
       <div style="border:2px solid #212121; background:#fbd0ca; box-shadow:0 10px 26px rgba(40,25,70,0.26);">
         <div style="display:flex; align-items:center; justify-content:space-between; height:46px; padding:0 12px; background:#b586bc; border-bottom:2px solid #212121;">
-          <span style="font-family:'Pixelify Sans', ui-monospace, monospace; font-size:14px; color:#212121;">chicago-marathon2023.png</span>
+          <span style="font-family:'Pixelify Sans', ui-monospace, monospace; font-size:18px; color:#212121;">System Administrator</span>
           <img src="assets/images/close.png" alt="" style="width:28px; height:28px;">
         </div>
-        <div style="position:relative; padding:8px;">
-          <img src="assets/images/marathon.jpg" alt="Victoria running the Chicago Marathon 2023" style="display:block; width:100%; height:auto; object-fit:cover;">
-          <div style="position:absolute; left:8px; right:8px; bottom:8px; background:#fbd0ca; padding:6px 8px; font-family:'Pixelify Sans', ui-monospace, monospace; font-weight:700; font-size:15px; color:#000;">photo courtesy of <a href="https://www.davidjaewonoh.com/" target="_blank" rel="noopener noreferrer" style="color:#000; text-decoration:underline; text-underline-offset:2px; font-weight:700;">David Jaewon Oh</a></div>
+        <div style="padding:24px 20px; display:flex; flex-direction:column; gap:16px; align-items:center;">
+          <div style="position:relative; align-self:stretch; height:180px;">
+            <img data-sprite src="assets/images/Sprite-blk.png" alt="Pixel sprite of Victoria — click to change hair color" draggable="false" style="position:absolute; right:0; bottom:0; width:180px; height:180px; image-rendering:pixelated; cursor:pointer;">
+            <div style="position:absolute; left:0; top:6px; background:#fff; border:1.5px solid #212121; padding:8px 12px; font-family:'Pixelify Sans', ui-monospace, monospace; font-size:13px; color:#000; white-space:nowrap;">click to change my hair color!
+              <span style="position:absolute; right:24px; bottom:-11px; width:0; height:0; border-left:9px solid transparent; border-right:9px solid transparent; border-top:11px solid #212121;"></span>
+              <span style="position:absolute; right:26px; bottom:-8px; width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:9px solid #fff;"></span>
+            </div>
+          </div>
+          <div style="align-self:stretch; text-align:center; font-family:'Pixelify Sans', ui-monospace, monospace; font-weight:700; font-size:12px; color:#000;">Sprite Vics made with <a href="https://www.avatarsinpixels.com" target="_blank" rel="noopener noreferrer" style="color:#000; font-weight:700; text-decoration:underline;">avatarsinpixels.com</a></div>
         </div>
       </div>
 
@@ -231,6 +243,16 @@ class Component extends DCLogic {
         if (w) w.style.display = 'none';
       });
     });
+
+    // ===== sprite hair-color rotation =====
+    const spriteSrcs = ['assets/images/Sprite-blk.png', 'assets/images/Sprite-blnde.png', 'assets/images/Sprite-pink.png', 'assets/images/Sprite-prp.png'];
+    spriteSrcs.forEach((s) => { const im = new Image(); im.src = s; });
+    let spriteIdx = 0;
+    const rotateSprite = () => {
+      spriteIdx = (spriteIdx + 1) % spriteSrcs.length;
+      root.querySelectorAll('[data-sprite]').forEach((el) => { el.src = spriteSrcs[spriteIdx]; });
+    };
+    root.querySelectorAll('[data-sprite]').forEach((el) => el.addEventListener('click', rotateSprite));
 
     // ===== contact form =====
     // Paste your Web3Forms access key here to enable real email delivery to omgvics@gmail.com.
