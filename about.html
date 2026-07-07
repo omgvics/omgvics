@@ -26,8 +26,6 @@
   .mobile-only { display: none; }
   .navpanel { transition: right .32s cubic-bezier(.4,0,.2,1); }
   .navbackdrop { opacity: 0; pointer-events: none; transition: opacity .3s ease; }
-  .desktop-only { position:absolute; inset:0; overflow:auto; display:flex; z-index:2; }
-  .desktop-stage-sizer { position:relative; flex:0 0 auto; margin:auto; }
   @media (max-width: 1024px) {
     .desktop-only { display: none !important; }
     .mobile-only { display: block; }
@@ -43,7 +41,7 @@
 
   <!-- ============================ DESKTOP ============================ -->
   <div class="desktop-only">
-  <div ref="{{ sizerRef }}" class="desktop-stage-sizer"><div ref="{{ stageRef }}" style="position:relative; width:1920px; height:1080px; transform-origin:top left;">
+  <div ref="{{ stageRef }}" style="position:absolute; left:50%; top:50%; width:1920px; height:1080px; transform:translate(-50%,-50%); transform-origin:center center; z-index:2;">
 
     <!-- sparkles -->
     <div style="position:absolute; left:1288px; top:150px; width:46px; height:46px; pointer-events:none; background:#e45e96; clip-path:polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%); animation:twinkle 3.4s ease-in-out infinite;"></div>
@@ -99,8 +97,7 @@
     </div>
 
   </div>
-  </div>
-  <div style="position:fixed; left:0; right:0; bottom:16px; text-align:center; z-index:80; pointer-events:none; font-family:'Poppins', sans-serif; font-weight:400; font-size:14px; color:#212121;">© 2026 Victoria Lo. All Rights Reserved.</div>
+  <div style="position:absolute; left:0; right:0; bottom:16px; text-align:center; z-index:80; pointer-events:none; font-family:'Poppins', sans-serif; font-weight:400; font-size:14px; color:#212121;">© 2026 Victoria Lo. All Rights Reserved.</div>
   </div>
 
   <!-- ============================ MOBILE ============================ -->
@@ -177,26 +174,18 @@ class Component extends DCLogic {
     super(props);
     this.rootRef = React.createRef();
     this.stageRef = React.createRef();
-    this.sizerRef = React.createRef();
     this.videoRef = React.createRef();
   }
 
   renderVals() {
-    return { rootRef: this.rootRef, stageRef: this.stageRef, sizerRef: this.sizerRef, videoRef: this.videoRef };
+    return { rootRef: this.rootRef, stageRef: this.stageRef, videoRef: this.videoRef };
   }
 
   fit() {
-    // Scale to fit width, never upscale past 1.0 (keeps PNG assets crisp).
-    // Height is NOT a constraint — if the stage is taller than the viewport the
-    // desktop scrolls, so windows stay as large & legible as the width allows.
-    const s = Math.min(window.innerWidth / 1920, 1);
+    const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
     this.scale = s;
     if (this.stageRef.current) {
-      this.stageRef.current.style.transform = 'scale(' + s + ')';
-    }
-    if (this.sizerRef && this.sizerRef.current) {
-      this.sizerRef.current.style.width = (1920 * s) + 'px';
-      this.sizerRef.current.style.height = (1080 * s) + 'px';
+      this.stageRef.current.style.transform = 'translate(-50%,-50%) scale(' + s + ')';
     }
   }
 
